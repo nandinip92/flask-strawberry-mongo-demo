@@ -1,0 +1,24 @@
+version: "4.4"
+
+# services:
+# This section lists all the containers (services) that Docker Compose will manage.
+# Each service is like a separate containerized application.
+services:
+  mongodb: #MongoDb service
+    image: mongo:6 # MongoDB version 6 → Official MongoDB image, version 6. Docker will pull this image from Docker Hub if you don’t have it locally.
+    container_name: flask-strawberry-mongo
+    ports:
+      - "27017:27017" # Expose MongoDB to your local machine
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: flask-strawberry-mongo
+    volumes:
+      - mongo-data:/data/db # This ensures data persists even if the container is removed or restarted.
+        # Here, you’re telling Docker to mount a volume called mongo-data to /data/db inside the container.
+
+# But if mongo-data hasn’t been declared, Docker Compose will still create it implicitly, but explicitly declaring it:
+#It declares a named volume called mongo-data.
+#The “empty” part just means: “use default Docker-managed settings for this volume”.
+#Docker will create the volume automatically when you run docker-compose up.
+volumes:
+  mongo-data: ## Docker-managed volume for storing MongoDB data permanently
