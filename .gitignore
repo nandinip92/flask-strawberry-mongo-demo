@@ -1,0 +1,33 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+env/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# VS Code settings (optional, if using VS Code)
+.vscode/
+
+# MacOS files (optional)
+.DS_Store
+
+# Logs
+*.log
+
+# Python test / coverage
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Flask instance folder (if any)
+instance/
+
+# Jupyter notebooks checkpoints (if using notebooks)
+.ipynb_checkpoints/
