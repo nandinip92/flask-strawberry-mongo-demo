@@ -3,10 +3,19 @@
 ## 1. **Set up a virtual environment** (optional but recommended):
 
 ```bash
-python -m venv venv
-# Windows
-venv\Scripts\activate
-# macOS/Linux
+python -m venv venv        # Create a virtual environment
+
+# Activate it:
+# Windows(command prompt):
+.\venv\Scripts\activate
+
+# Windows (PowerShell)
+.\venv\Scripts\Activate.ps1
+
+#git bash of windows
+source venv/Scripts/activate
+
+# Linux/MacOS:
 source venv/bin/activate
 ```
 
